@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: blog-agent
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+
+blog-agent:
+  output-dir: blog-posts
+
+
+embabel:
+  agent:
+    logging:
+      personality: starwars
+  models:
+    default-llm: minimax-m2.5:cloud
+    llms:
+      reviewer: qwen3-coder:480b-cloud
+
+
+#  spring.ai.ollama.chat.options.model=qwen2.5:7b-instruct
+#  spring.ai.ollama.chat.base-url=http://localhost:11434
