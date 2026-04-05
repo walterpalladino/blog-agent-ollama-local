@@ -1,6 +1,6 @@
 # Blog Agent
 
-This is a slightly modified version from the Dan Vega's [Blog Agent](https://github.com/danvega/blog-agent) confired to use Ollama local models instead of OpenAI.
+This is a slightly modified version from the Dan Vega's [Blog Agent](https://github.com/danvega/blog-agent) confired to use Ollama local models instead of OpenAI. For this test, I used two cloud models so, no cost and no local storage required.
 
 An AI-powered blog post writer and reviewer built with Spring Boot and the [Embabel Agent Framework](https://repo.embabel.com). Give it a topic, and it drafts a beginner-friendly blog post, reviews it with a separate LLM, and saves the polished result as Markdown.
 
