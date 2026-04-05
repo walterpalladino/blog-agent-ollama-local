@@ -93,3 +93,40 @@ Because Embabel resolves action order from input/output types, new actions can b
 - Embabel Agent Framework 0.4.0
 - Spring AI 1.1.4
 - Java 23
+
+
+## Changes to use local Ollama
+
+### pom.xml
+
+Replace OpenAI starter for Ollama starter
+
+    <dependency>
+      <groupId>com.embabel.agent</groupId>
+      <artifactId>embabel-agent-starter-ollama</artifactId>
+      <version>${embabel-agent.version}</version>
+    </dependency>
+
+### Changes to the project properties (application.yaml)
+
+```yaml
+spring:
+  application:
+    name: blog-agent
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+
+blog-agent:
+  output-dir: blog-posts
+
+
+embabel:
+  agent:
+    logging:
+      personality: starwars
+  models:
+    default-llm: minimax-m2.5:cloud
+    llms:
+      reviewer: qwen3-coder:480b-cloud
+```
